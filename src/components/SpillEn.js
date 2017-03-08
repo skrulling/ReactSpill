@@ -6,9 +6,6 @@ import { Link } from "react-router";
 import { Jumbotron, Button, Grid, Row, Col, PageHeader,
 } from 'react-bootstrap';
 
-
-
-
 const SpillEn = React.createClass ({
 
     oppgaveFunk: function(){
@@ -44,14 +41,14 @@ const SpillEn = React.createClass ({
         });
     },
     renderKnapp: function () {
-        var Knapp = {};
+        
         if (this.state.taskCompleted){
-            Knapp = <Button bsStyle="warning" bsSize="large" onClick={this.newQuestion} block>Neste Oppgave!</Button>;
+            return <Button autoFocus bsStyle="warning" bsSize="large" onKeyDown={this.newQuestion} onClick={this.newQuestion} block>Neste Oppgave!</Button>;
         }
         else {
-            Knapp = <Button bsStyle="success" bsSize="large" onClick={this.completeTask} block>Oppgave fullført!</Button>
+            return <Button autoFocus bsStyle="success" bsSize="large" onKeyDown={this.completeTask} onClick={this.completeTask} block>Oppgave fullført!</Button>
         }
-        return Knapp
+        
     },
     renderQuestion: function () {
         const QuestionStyle = {

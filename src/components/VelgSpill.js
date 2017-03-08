@@ -44,12 +44,12 @@ class VelgSpill extends Component {
                     <Row className="show-grid">
                         <Col md={6} /*mdPush={6}*/>
                             <Jumbotron style={JumboStyle}>
-                                <Button bsStyle="warning" bsSize="large" block>Spill 3</Button>
+                                <Link to="/jegharaldri"><Button bsStyle="warning" bsSize="large" block>Jeg Har Aldri</Button></Link>
                             </Jumbotron>
                         </Col>
                         <Col md={6} /*mdPush={6}*/>
                             <Jumbotron style={JumboStyle}>
-                                <Button bsStyle="info" bsSize="large" block>Spill 4</Button>
+                                <Link to="/pekeleken"><Button bsStyle="info" bsSize="large" block>Pekeleken</Button></Link>
                             </Jumbotron>
                         </Col>
                     </Row>
