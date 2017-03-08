@@ -17,7 +17,14 @@ class JegHarAldri extends Component {
         	"vært forelsket i en venns far/mor", "sneket meg inn på kino", "sendt noen på sykehus ved et uhell",
         	"vært i en fysisk slåsskamp", "jobbet med noen jeg hatet", "grått offentlig på grunn av en sang",
         	"vært vegetarianer eller veganer", "sett på porno med noen andre", "fantasert om noen i dette rommet",
-        	"hatt sex med noen 10+ år eldre enn meg"]
+        	"hatt sex med noen 10+ år eldre enn meg", "hatt på håndjern", "skulket skolen", "døgnet", "gitt en lapdance",
+			"mottat en lapdance", "sendt en dristig snap til feil person", "gitt videre en burdagsgave/julegave",
+			"badet naken", "badet naken i et svømmebasseng", "vært påvirket av alkohol på jobb", "gått 'walk of shame'",
+			"gått på skolen/jobb uten undertøy", "blitt tatt med falsk ID", "isbadet", "bæsjet i skogen",
+			"blitt kastet ut fra et utested", "blitt nektet adgang til et utested", "fått spandert drikke på byen",
+			"dratt på ferie alene", "stanset noen fra å kysse meg", "vært forelsket i læreren min",
+			"vært forelsket i en nær venns søster eller bror", "tatt med noe ulovelig over grensen",
+			"hatt samleie hvor kroppsolje var innvolvert", "onanert på offentlig sted", "smakt sæd",]
         	};
     }
     componentDidMount() {
@@ -26,10 +33,10 @@ class JegHarAldri extends Component {
     ChooseQuestion() {
     	var tempArray = this.state.oppgaver.slice();
         const ran = Math.floor(Math.random() * this.state.oppgaver.length);
-        const mission = this.state.oppgaver[ran]
+        const mission = this.state.oppgaver[ran];
 
-        tempArray.splice(ran, 1)
-        this.setState({oppgaver: tempArray})
+        tempArray.splice(ran, 1);
+        this.setState({oppgaver: tempArray});
         if (this.state.oppgaver.length === 0) {
         	this.setState({qustionsLeft: false})
         }
@@ -59,7 +66,7 @@ class JegHarAldri extends Component {
 			textAlign: "center",
 			color: "white",
 			margin: 20
-		}
+		};
 
 		var buttonToRender = null;
 
@@ -67,7 +74,7 @@ class JegHarAldri extends Component {
 			buttonToRender =  <Button autoFocus bsStyle="warning" bsSize="large" onKeyDown={() => this.newQuestion()} onClick={() => this.newQuestion()} block>Neste Oppgave!</Button>
 		}
 		else {
-			buttonToRender = <h3 style={h3Style}>Gå tilbake til hovedmeny for å spille noe annet</h3>
+			buttonToRender = <Link to="/"><h3 style={h3Style}>Gå tilbake til hovedmeny for å spille noe annet</h3></Link>
 		}
 		return buttonToRender
 	}
