@@ -95,7 +95,7 @@ class JegHarAldri extends Component {
 			<Grid>
                 <Row className="show-grid">
                     <Col md={12}>
-                        <Link to="/"><PageHeader style={HeaderStyle}>Alkohol Bonanza</PageHeader></Link>
+                        <Link to="/" style={{textDecoration: "none"}}><PageHeader style={HeaderStyle}>Drikkespill</PageHeader></Link>
                     </Col>
                 </Row>
                 <Jumbotron style={JumboStyle}>
