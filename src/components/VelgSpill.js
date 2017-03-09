@@ -11,7 +11,7 @@ class VelgSpill extends Component {
     render() {
 
         const JumboStyle = {
-            backgroundColor: "#e63900",
+            backgroundColor: "#88D317",
             borderRadius: 20,
         };
         const HeaderStyle = {
@@ -19,6 +19,10 @@ class VelgSpill extends Component {
             textAlign: "center",
             color: "white",
             paddingTop: 100,
+        };
+        const btnStyle = {
+            backgroundColor: "#535353",
+            color: "#1A0315",
         };
 
         return (
@@ -32,7 +36,7 @@ class VelgSpill extends Component {
                     <Row className="show-grid">
                         <Col md={6} /*mdPush={6}*/>
                             <Jumbotron style={JumboStyle}>
-                                <Link to="/spill"><Button bsStyle="primary" bsSize="large" block>Spill 1</Button></Link>
+                                <Link to="/spill" style={{textDecoration: "none"}}><Button bsStyle={btnStyle} bsSize="large" block>Spill 1</Button></Link>
                             </Jumbotron>
                         </Col>
                         <Col md={6} /*mdPush={6}*/>

@@ -74,7 +74,7 @@ class pekeLeken extends Component {
             paddingTop: 100,
         };
         const JumboStyle = {
-            backgroundColor: "#e63900",
+            backgroundColor: "#88D317",
             borderRadius: 20,
         };
 
